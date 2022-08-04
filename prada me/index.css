@@ -1,0 +1,572 @@
+/* :root {
+    --primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  } */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    color: black;
+    font: normal 16px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+body a {
+    color: black;
+    text-decoration: none;
+}
+
+body a:hover {
+    color: goldenrod;
+}
+
+body li {
+    list-style: none;
+}
+
+/* Header / Navbar */
+
+.nav-header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    opacity: 1;
+    background-color: white;
+    border-bottom: 0.1px solid goldenrod;
+    width: 100%;
+}
+
+#main-header{
+    text-align: left;
+    margin: 0 1rem;
+}
+
+#main-header a{
+    color: black;
+    font: normal 800 2rem serif;
+}
+
+.navbar{
+    margin: 0 4rem;
+}
+
+.navbar ul{
+    margin: 1rem 0;
+    list-style: none;
+}
+
+.nav-li{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.nav-li > li {
+    width: max-content;
+}
+
+.nav-li > li > h5{
+    margin:0  1rem;
+    transition: background, padding 500ms ease;
+}
+
+.men {
+    display: none;
+}
+
+.nav-li li:hover .men {
+    display: block;
+    position: fixed;
+    padding-top: 1rem;
+    width: 100vw;
+}
+
+.nav-li li:hover .men ul{
+    display: block;
+    line-height: 1.3rem;
+}
+
+.men .men-contain {
+    display: flex;
+    position: fixed;
+    left: 0;
+    background-color: white;
+    border-top: 0.1px solid goldenrod;
+}
+
+.men .men-contain ul {
+    text-align: left;
+    margin: 1rem;
+}
+
+.men .men-contain ul h3 {
+    font-size: 0.8rem;
+    font-weight: 650;
+}
+
+.men .men-contain li {
+    margin: 0.5rem 0;
+}
+
+.men .men-contain li a{
+    font-size: 0.8rem;
+    transition: padding 300ms ease;
+}
+
+.men .men-contain li a:hover {
+    line-height: 1.5rem;
+    color: goldenrod;
+}
+
+.men .men-contain .mn-highlights {
+    background-color:beige;
+    padding-right: 2rem;
+    margin-top: 0;
+    padding: 0.5rem 0;
+
+}
+
+.men .men-contain .mn-highlights ul{
+   padding: 0  1rem;
+   width: max-content;
+}
+
+.mn-cancel {
+    margin: 0.2rem 1rem 0 3rem;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.men-grid{
+    display: grid;
+    gap: 1rem 0.5rem;
+    grid-template-areas: 
+        'mn-rtw mn-bags mn-shoes mn-accessories mn-ls-accessories mn-travel'
+        'mn-rtw mn-bags mn-shoes mn-accessories mn-jnw mn-travel'
+    ;
+    padding: 0.5rem 0;
+}
+
+.men-grid div ul {
+    width: auto;
+}
+
+.mn-rtw {
+    grid-area: mn-rtw;
+}
+
+.mn-bags {
+    grid-area: mn-bags;
+}
+
+.mn-shoes {
+    grid-area: mn-shoes;
+    margin-right: 3rem;
+}
+
+#wmen-shoes {
+    width: max-content;
+}
+
+.mn-accessories {
+    grid-area: mn-accessories;
+}
+
+.mn-ls-accessories {
+    grid-area: mn-ls-accessories;
+
+}
+
+.mn-jnw {
+    grid-area: mn-jnw;
+}
+
+.mn-travel {
+    grid-area: mn-travel;
+}
+
+.bags {
+    display: none;
+}
+
+.nav-li li:hover .bags {
+    display: block;
+    position: fixed;
+    padding-top: 1rem;
+    width: 100vw;
+    height: 50vh;
+}
+
+.nav-li li:hover .bags{
+    display: block;
+}
+
+.bags .bags-contain {
+    display: flex;
+    position: fixed;
+    left: 0;
+    background-color: white;
+    border-top: 0.1px solid goldenrod;
+    padding: 0.5rem;
+    width: 100vw;
+    height: 50vh;
+}
+
+.bags .bags-contain .big-bag1 {
+    height: 100%;
+    width: 20%;
+    background-image: url(images/bag_big.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.bags .bags-contain ul {
+    display: block;
+    text-align: left;
+    background-color: beige;
+    margin: 0 1rem;
+    padding: 1rem 2rem 1rem 1rem;
+    height: 100%;
+}
+
+.bags .bags-contain ul h3 {
+    font-size: 0.8rem;
+    font-weight: 650;
+}
+
+.bags .bags-contain ul li {
+    margin: 0.5rem 0;
+}
+
+.bags .bags-contain ul li a{
+    font-size: 0.8rem;
+    transition: padding 300ms ease;
+}
+
+.bags .bags-contain ul li a:hover {
+    line-height: 1.5rem;
+    color: goldenrod;
+}
+
+.bags .bags-contain .bags-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-auto-rows: auto auto;
+    gap: 1rem;
+    width: 30%;
+    height: 100%;
+}
+
+.bags .bags-contain .bags-grid div {
+    background-position: center;
+    background-size: cover;
+}
+
+.bags-grid #bag1{
+   background-image: url(images/bag1.jpg);
+}
+
+.bags-grid #bag2 {
+    background-image: url(images/bag2.webp);
+}
+.bags-grid #bag3 {
+    background-image: url(images/bag3.webp);
+}
+
+.bags-grid #bag4 {
+    background-image: url(images/bag4.webp);
+}
+
+.bags-grid #bag5 {
+    background-image: url(images/bag5.webp);
+}
+
+.bags-grid #bag6 {
+    background-image: url(images/bag6.webp);
+}
+
+.mn-cancel-2 {
+    position: absolute;
+    right: 2rem;
+    top: 0;
+    margin-top: 0.2rem;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+/* Body */
+
+.body-ody {
+    position: relative;
+    top: 3rem;
+    margin-bottom: 5rem;
+    border-bottom: 0.1px goldenrod solid;
+}
+
+.container {
+    display: block;
+    margin: 1rem;
+}
+
+.rtw{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.9rem;
+    height: 100vh;
+}
+
+.rtw div{
+    padding: 10px;
+    background-size: cover;
+}
+
+#rtw-women {
+    background-image: url(images/rtw-w.webp);
+}
+
+#rtw-men{
+    background-image: url(images/rtw-men.webp);
+}
+
+.rtw-top{
+    font: normal 600 1.8rem'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 2rem;
+    margin-top: 1.6rem;
+}
+
+.rtw h3{
+    float: right;
+    margin-top: 1.5rem;
+    letter-spacing: 1px;
+    font: normal 400 1rem Tahoma;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid goldenrod;
+}
+
+.mini-bags{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    height: 150vh;
+    margin: 1rem 1rem 1rem 0;
+}
+
+.m-bags{
+    width: 30vw;
+    z-index: 1;
+    background: beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1.5rem;
+    font: normal 1rem Arial, Helvetica, sans-serif;
+}
+
+.m-bags h3{
+    font: normal 2.5rem 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 2rem;
+}
+
+.m-bags p{
+    align-self: flex-start;
+    letter-spacing: 2px;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid goldenrod;
+}
+
+.animate-bags {
+    display: flex;
+    position: relative;
+    animation: content 30s linear 0s infinite alternate forwards;
+}
+
+@keyframes content {
+    0% {left: 0;}
+    100% {left: -365rem;}
+}
+
+.ws-mb{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.9rem;
+    height: 100vh;
+}
+
+
+.ws-mb div{
+    padding: 10px;
+    background-size: cover;
+}
+
+.ws-mb p{
+    font: normal 600 1.8rem'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 2rem;
+    margin-top: 1.6rem;
+}
+
+.ws-mb h3{
+    float: right;
+    margin-top: 2rem;
+    letter-spacing: 1px;
+    font: normal 400 1rem Tahoma;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid goldenrod;
+}
+
+#women-shoes {
+    background-image: url(images/w-shoes.webp);
+}
+
+#men-bags{
+    background-image: url(images/men-bags.webp);
+}
+
+.pradasphere {
+    display: flex;
+    background-color: black;
+    height: 110vh;
+}
+
+.pradasphere #ps {
+    transform: rotate(-90deg);
+    align-self: center;
+}
+
+#ps p {
+    font: normal 600 1.7rem'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#ps p a {
+    color: white;
+}
+
+.pradasphere .symbole {
+    display: flex;
+    flex-direction: column;
+    margin: 2.5rem 0;
+    padding: 3rem 1rem 0 0;
+}
+
+
+.symbole h1 {
+    color: white;
+    margin: 0.3rem 0 1.5rem 0;
+}
+
+.symbole p {
+    align-self: flex-start;
+    letter-spacing: 1px;
+    font: normal 400 1rem Tahoma;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid goldenrod;
+}
+
+.symbole p a {
+    color: white;
+}
+
+.symbole p a:hover {
+    color: goldenrod;
+}
+
+/* Media Queries*/
+
+@media(max-width: 980px){
+    .navbar {display: none;}
+    .body-ody {
+        position: relative;
+        top: 2.5rem;
+    }
+    .rtw {
+        display: block;
+    }
+    .rtw div{
+        margin-bottom: 1rem; 
+        height: 49vh; 
+    }
+
+    .rtw div p {
+        display: none;
+    }
+    .mini-bags {
+        display: block;
+        height: 17vh;
+        margin: 0 1rem;
+        padding-bottom: 0;
+    }
+    .mini-bags div {
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem;
+        margin: 0;
+    }
+    .mini-bags div p {
+        display: flex;
+        align-self: center;
+        border: none;
+        text-decoration: underline;
+    }
+    .mini-bags img {
+        display: none;
+    }
+    .ws-mb{
+        display: block;
+    }
+    .ws-mb div{
+        margin-bottom: 1rem; 
+        height: 49vh; 
+    }
+
+    .ws-mb div p {
+      display: none;
+    }
+
+    #women-shoes {
+        background-position: bottom;
+    }
+    
+    #men-bags{
+        background-position: bottom;
+    }
+
+    .pradasphere {
+        display: none;
+    }
+
+}
+
+/* Footer */
+
+.info {
+    display: flex;
+    line-height: 1.5rem;
+}
+
+.info #company {
+    margin-right: 9rem;
+}
+
+#company h4 {
+    margin-bottom: 0.5rem;
+}
+
+#company ul {
+    list-style: none;
+}
+
+#footer{
+    border: none;
+    padding-left: 1rem;
+}
+
+#main-footer {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+}
