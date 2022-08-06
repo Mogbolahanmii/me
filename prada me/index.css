@@ -1,10 +1,3 @@
-/* :root {
-    --primary: #ddd;
-    --dark: #333;
-    --light: #fff;
-    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
-  } */
-
 * {
     margin: 0;
     padding: 0;
@@ -313,7 +306,7 @@ body li {
 
 .container {
     display: block;
-    margin: 1rem;
+    margin: 1.5rem;
 }
 
 .rtw{
@@ -324,108 +317,73 @@ body li {
 }
 
 .rtw div{
-    padding: 10px;
+    padding: 1rem;
     background-size: cover;
 }
 
+#fw22-women {
+    background-image: url(images/fw-women.webp);
+}
+
+#fw22-men {
+    background-image: url(images/fw-men.webp);
+}
+
+.p-symbole {
+    display: flex;
+    background-image: url(images/prada-symbole.webp);
+    background-position: center;
+    background-size: cover;
+    height: 85vh;
+}
+
+.prada-symbole {
+    align-self: center;
+    padding-left: 1rem;
+}
+
+.prada-symbole p {
+    color: white;
+    font: normal bolder 2rem 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 2rem;
+}
+
+.prada-symbole h3 {
+    display: inline-block;
+    flex-direction: row;
+    margin-right: 1rem;
+    letter-spacing: 1px;
+    font: normal 400 1rem Tahoma;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid goldenrod;
+}
+
+.prada-symbole a{
+    color: white;
+}
+
 #rtw-women {
-    background-image: url(images/rtw-w.webp);
+    background-image: url(images/rtw-women2.webp);
 }
 
 #rtw-men{
-    background-image: url(images/rtw-men.webp);
+    background-image: url(images/rtw-men2.webp);
 }
 
 .rtw-top{
-    font: normal 600 1.8rem'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font: normal 650 2rem'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 2rem;
     margin-top: 1.6rem;
 }
 
 .rtw h3{
-    float: right;
-    margin-top: 1.5rem;
-    letter-spacing: 1px;
-    font: normal 400 1rem Tahoma;
-    padding-bottom: 0.4rem;
-    border-bottom: 1px solid goldenrod;
-}
-
-.mini-bags{
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    height: 150vh;
-    margin: 1rem 1rem 1rem 0;
-}
-
-.m-bags{
-    width: 30vw;
-    z-index: 1;
-    background: beige;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 1.5rem;
-    font: normal 1rem Arial, Helvetica, sans-serif;
-}
-
-.m-bags h3{
-    font: normal 2.5rem 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-bottom: 2rem;
-}
-
-.m-bags p{
-    align-self: flex-start;
-    letter-spacing: 2px;
-    padding-bottom: 0.4rem;
-    border-bottom: 1px solid goldenrod;
-}
-
-.animate-bags {
-    display: flex;
     position: relative;
-    animation: content 30s linear 0s infinite alternate forwards;
-}
-
-@keyframes content {
-    0% {left: 0;}
-    100% {left: -365rem;}
-}
-
-.ws-mb{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.9rem;
-    height: 100vh;
-}
-
-
-.ws-mb div{
-    padding: 10px;
-    background-size: cover;
-}
-
-.ws-mb p{
-    font: normal 600 1.8rem'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 2rem;
-    margin-top: 1.6rem;
-}
-
-.ws-mb h3{
+    top: -2rem;
     float: right;
-    margin-top: 2rem;
     letter-spacing: 1px;
     font: normal 400 1rem Tahoma;
     padding-bottom: 0.4rem;
     border-bottom: 1px solid goldenrod;
-}
-
-#women-shoes {
-    background-image: url(images/w-shoes.webp);
-}
-
-#men-bags{
-    background-image: url(images/men-bags.webp);
 }
 
 .pradasphere {
@@ -440,10 +398,7 @@ body li {
 }
 
 #ps p {
-    font: normal 600 1.7rem'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-#ps p a {
+    font: normal bolder 1.7rem'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
 }
 
@@ -451,9 +406,16 @@ body li {
     display: flex;
     flex-direction: column;
     margin: 2.5rem 0;
-    padding: 3rem 1rem 0 0;
+    padding: 2rem 1rem 2rem 0;
 }
 
+.symbole #schafer {
+    background-image: url(images/fw22-symbole.webp);
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+    width: 70vw;
+}
 
 .symbole h1 {
     color: white;
@@ -481,65 +443,71 @@ body li {
 @media(max-width: 980px){
     .navbar {display: none;}
     .body-ody {
-        position: relative;
-        top: 2.5rem;
+        top: 2.8rem;
+    }
+    .container {
+        display: block;
+        margin: 0.7rem;
     }
     .rtw {
         display: block;
+        height: fit-content;
     }
-    .rtw div{
+    .rtw div {
         margin-bottom: 1rem; 
-        height: 49vh; 
+        height: 100vh; 
+        display: flex;
+        flex-direction: column;
     }
-
-    .rtw div p {
-        display: none;
-    }
-    .mini-bags {
-        display: block;
-        height: 17vh;
-        margin: 0 1rem;
-        padding-bottom: 0;
-    }
-    .mini-bags div {
-        width: 100%;
-        text-align: center;
-        padding: 0.5rem;
+    .rtw-top {
+        font: normal 650 1.8rem'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 2rem;
         margin: 0;
     }
-    .mini-bags div p {
+    .rtw h3{
+        position: relative;
+        top: 0;
         display: flex;
-        align-self: center;
-        border: none;
-        text-decoration: underline;
+        align-self: flex-start;
+        letter-spacing: 1px;
+        font: normal 400 1rem Tahoma;
+        margin-top: 1rem;
+        padding-bottom: 0.4rem;
+        border-bottom: 1px solid goldenrod;
     }
-    .mini-bags img {
+        .prada-symbole {
+        align-self: flex-start;
+        padding: 1rem 0 0 1rem;
+    }
+    .prada-symbole p {
+        margin-bottom: 0.7rem;
+    }
+    .prada-symbole h3 {
+        margin-right: 0.5rem;
+    }
+        .pradasphere {
+        display: flex;
+        background-color: black;
+        height: 140vh;
+    }
+      .pradasphere #ps{
         display: none;
     }
-    .ws-mb{
-        display: block;
+        .pradasphere .symbole {
+        display: flex;
+        flex-direction: column;
+        margin: 0.7rem;
+        padding: 0;
     }
-    .ws-mb div{
-        margin-bottom: 1rem; 
-        height: 49vh; 
+    .symbole #schafer{
+        background-image: url(images/fw22-symbole-min.webp);
+        height: 120vh;
+        width: 91vw;
     }
-
-    .ws-mb div p {
-      display: none;
+    .symbole h1 {
+        color: white;
+        font: normal 650 1.7rem 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-
-    #women-shoes {
-        background-position: bottom;
-    }
-    
-    #men-bags{
-        background-position: bottom;
-    }
-
-    .pradasphere {
-        display: none;
-    }
-
 }
 
 /* Footer */
