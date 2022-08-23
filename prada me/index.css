@@ -475,9 +475,9 @@ body li {
         padding-bottom: 0.4rem;
         border-bottom: 1px solid goldenrod;
     }
-        .prada-symbole {
-        align-self: flex-start;
-        padding: 1rem 0 0 1rem;
+    .prada-symbole {
+    align-self: flex-start;
+    padding: 1rem 0 0 1rem;
     }
     .prada-symbole p {
         margin-bottom: 0.7rem;
@@ -485,19 +485,19 @@ body li {
     .prada-symbole h3 {
         margin-right: 0.5rem;
     }
-        .pradasphere {
-        display: flex;
-        background-color: black;
-        height: 140vh;
+    .pradasphere {
+    display: flex;
+    background-color: black;
+    height: 140vh;
     }
-      .pradasphere #ps{
-        display: none;
+    .pradasphere #ps{
+    display: none;
     }
-        .pradasphere .symbole {
-        display: flex;
-        flex-direction: column;
-        margin: 0.7rem;
-        padding: 0;
+    .pradasphere .symbole {
+    display: flex;
+    flex-direction: column;
+    margin: 0.7rem;
+    padding: 0;
     }
     .symbole #schafer{
         background-image: url(images/fw22-symbole-min.webp);
