@@ -67,7 +67,7 @@ body li {
 }
 
 .nav-li > li > h5{
-    margin:0  1rem;
+    margin:0 1rem;
     transition: background, padding 500ms ease;
 }
 
